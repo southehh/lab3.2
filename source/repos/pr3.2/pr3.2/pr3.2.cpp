@@ -13,10 +13,22 @@ int main() {
 
 	if (x < 0 && b != 0)
 		F = (2 * x - c) / (c * x - a);
-	else if (x > 0 && b == 0)
+	if (x > 0 && b == 0)
 		F = (x - a) / (x - c);
 	else
 		F = -x / c - c / (2 * x);
+	
+	cout << "F = " << F;
+
+	//повне розгалуження
+
+	if(x < 0 && b != 0 )
+		F = (2 * x - c) / (c * x - a);
+	else
+		if (x > 0 && b == 0)
+			F = (x - a) / (x - c);
+		else
+			F = -x / c - c / (2 * x);
 
 	cout << "F = " << F;
 
